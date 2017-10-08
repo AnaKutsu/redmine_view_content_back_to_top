@@ -18,6 +18,12 @@ Supported versions
 * Developed on Redmine 3.4
 * May be able to run with older versions
 
+Screenshots
+------------------
+
+![PC](screenshots/pc_with_arrow.png)
+
+![Mobile](screenshots/mobile_with_arrow.png)
 
 License
 -------
