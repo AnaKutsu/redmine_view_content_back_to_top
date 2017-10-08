@@ -1,0 +1,42 @@
+<div class="wrapper-back-to-top-mobile contextual">
+	<a href="#" class="icon sort asc scroll-to" title="<%= l(:back_to_top) %>"><%= l(:back_to_top) %></a>
+</div>
+<div class="wrapper-back-to-top-pc issue">
+	<div class="contextual">
+		<a href="#" class="icon-only sort asc scroll-to" title="<%= l(:back_to_top) %>"><%= l(:back_to_top) %></a>
+	</div>
+</div>
+<style>
+@media screen and (max-width: 899px) {
+	.wrapper-back-to-top-pc {
+		display: none;
+	}
+}
+@media screen and (min-width: 900px) {
+	.wrapper-back-to-top-mobile {
+		display: none;
+	}
+	.wrapper-back-to-top-pc.issue {
+		border: none;
+		background: none;
+		position: fixed;
+		bottom: 1.5em;
+		right: 1.5em;
+	}
+	.wrapper-back-to-top-pc a.sort {
+		padding-right: 0;
+		background-position: 50% 50%;
+		padding: 0.5em 0 0.5em 2.5em;
+	}
+}
+</style>
+<script>
+$('.scroll-to').click(function () {
+	var speed = 500;
+	var href= $(this).attr('href');
+	var target = $(href == '#' || href == '' ? 'html' : href);
+	var position = target.offset().top;
+	$('html, body').animate({scrollTop:position}, speed, 'swing');
+	return false;
+});
+</script>
